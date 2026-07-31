@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADITMEX · Materias primas para el sector agropecuario</title>
+<meta name="description" content="ADITMEX. Conservadores, acidulantes, espesantes y aditivos funcionales para nutrición animal, agroindustria y poscosecha. Respaldo técnico para el campo mexicano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ADITMEX — Design tokens (sector agropecuario)
+   Concepto: "Del campo a la fórmula"
+   ------------------------------------------------------------
+   ESTIMACIÓN VISUAL — no verificada contra el sitio real.
+   No se pudo leer el CSS ni decodificar imágenes de aditmex.com.mx
+   con las herramientas disponibles. Misma paleta institucional
+   estimada usada en la versión de panificación, para mantener
+   consistencia de marca entre landing pages. Sustituye estos
+   valores en cuanto tengas los HEX oficiales de ADITMEX.
+   ============================================================ */
+:root{
+  --flour:      #EEF3F7;   /* base clara institucional */
+  --flour-dim:  #DCE7EF;   /* superficie secundaria clara */
+  --paper:      #FFFFFF;   /* tarjetas claras */
+  --espresso:   #0B3556;   /* azul corporativo — fondo oscuro principal */
+  --espresso-2: #123F66;   /* azul corporativo — fondo oscuro secundario */
+  --ink:        #10202E;   /* texto principal sobre claro */
+  --ink-soft:   #48606F;   /* texto secundario sobre claro */
+  --cream-text: #EAF2F8;   /* texto principal sobre oscuro */
+  --cream-soft: #A9C3D6;   /* texto secundario sobre oscuro */
+  --wheat:      #1B8A7A;   /* teal — acento primario "campo/natural" */
+  --wheat-lt:   #3FB39E;
+  --paprika:    #E8862B;   /* ámbar cálido — CTA */
+  --paprika-lt: #F2A354;
+  --steel:      #2E6F9E;   /* azul secundario — acento técnico */
+  --steel-lt:   #6FA8CC;
+  --line:       rgba(16,32,46,0.12);
+  --line-dark:  rgba(234,242,248,0.16);
+
+  --serif: 'Fraunces', serif;
+  --sans:  'Manrope', sans-serif;
+  --mono:  'IBM Plex Mono', monospace;
+
+  --container: 1200px;
+  --ease: cubic-bezier(.22,.68,0,1);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family: var(--sans);
+  background: var(--flour);
+  color: var(--ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+.container{max-width: var(--container); margin:0 auto; padding: 0 32px;}
+@media (max-width:640px){.container{padding:0 20px;}}
+
+::selection{background: var(--wheat); color: #fff;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+h1,h2,h3,h4{font-family: var(--serif); font-weight:600; letter-spacing:-0.01em; line-height:1.08;}
+
+.eyebrow{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color: var(--paprika);
+}
+.eyebrow::before{
+  content:'';
+  width: 22px; height:1px; background: currentColor;
+}
+
+.spec{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+  color: var(--ink-soft);
+  background: rgba(255,255,255,0.5);
+}
+.spec .dot{width:5px;height:5px;border-radius:50%;background:var(--wheat);flex:none;}
+.spec b{color:var(--ink); font-weight:600;}
+
+.reveal{opacity:0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s);}
+.reveal.in{opacity:1; transform:none;}
+
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--sans); font-weight:700; font-size:15px;
+  padding: 16px 28px; border-radius:3px;
+  cursor:pointer; border:1px solid transparent;
+  transition: transform .35s var(--ease), background .35s, box-shadow .35s, color .35s, border-color .35s;
+  letter-spacing: 0.01em;
+}
+.btn-primary{
+  background: var(--paprika); color: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15), 0 14px 30px -14px rgba(232,134,43,.65);
+}
+.btn-primary:hover{ background: var(--paprika-lt); transform: translateY(-2px); box-shadow: 0 20px 34px -16px rgba(232,134,43,.75);}
+.btn-ghost{
+  background:transparent; color: var(--cream-text); border-color: var(--line-dark);
+}
+.btn-ghost:hover{ border-color: var(--wheat); color:var(--wheat-lt); transform: translateY(-2px);}
+.btn-dark{
+  background: var(--espresso); color: var(--flour);
+}
+.btn-dark:hover{ background:#123f66; transform: translateY(-2px);}
+.btn svg{width:16px;height:16px; transition: transform .35s var(--ease);}
+.btn:hover svg{transform: translateX(4px);}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+header.nav{
+  position: fixed; top:0; left:0; right:0; z-index: 100;
+  padding: 22px 0;
+  transition: background .5s var(--ease), padding .5s var(--ease), border-color .5s;
+  border-bottom: 1px solid transparent;
+}
+header.nav.solid{
+  background: rgba(11,53,86,0.92);
+  backdrop-filter: blur(10px);
+  padding: 14px 0;
+  border-color: var(--line-dark);
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between;}
+.logo{
+  font-family: var(--serif); font-weight:700; font-size:22px; letter-spacing:0.01em;
+  color: var(--cream-text);
+  display:flex; align-items:baseline; gap:8px;
+}
+.logo em{
+  font-style:italic; font-weight:500; color: var(--wheat-lt); font-size:13px; letter-spacing:0.03em;
+}
+.nav-links{display:flex; gap:36px; align-items:center;}
+.nav-links a{
+  font-size:13px; font-weight:600; color: var(--cream-soft);
+  letter-spacing:0.03em; text-transform:uppercase;
+  position:relative; padding-bottom:4px;
+  transition: color .3s;
+}
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:0; height:1px; width:0%;
+  background: var(--wheat); transition: width .35s var(--ease);
+}
+.nav-links a:hover{color:var(--cream-text);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{font-size:13px !important; padding: 11px 20px !important;}
+.nav-toggle{display:none;}
+@media (max-width: 880px){
+  .nav-links{display:none;}
+  .nav-toggle{display:block; background:none; border:none; color:var(--cream-text); font-size:22px; cursor:pointer;}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative; min-height: 100svh;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  background: var(--espresso);
+  color: var(--cream-text);
+  overflow:hidden;
+  padding-top: 120px;
+}
+.hero-media{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(11,53,86,0.35) 0%, rgba(11,53,86,0.55) 45%, rgba(11,53,86,0.97) 100%),
+    radial-gradient(120% 90% at 15% 15%, rgba(27,138,122,0.20), transparent 60%),
+    url('assets/images/hero/hero_main.jpg') center 42% / cover no-repeat,
+    linear-gradient(150deg, #0d3550 0%, #082336 55%, #0b3556 100%);
+}
+#grain-canvas{position:absolute; inset:0; opacity:0.5; mix-blend-mode:overlay; pointer-events:none;}
+.hero-inner{position:relative; z-index:2; padding: 120px 0 84px;}
+.hero-eyebrow{color: var(--wheat-lt); margin-bottom:26px;}
+.hero h1{
+  font-size: clamp(38px, 6vw, 86px);
+  max-width: 16ch;
+  color: var(--flour);
+}
+.hero h1 i{ color: var(--wheat-lt); font-style:italic; font-weight:500;}
+.hero-sub{
+  max-width:580px; margin-top:26px; font-size:19px; color: var(--cream-soft); font-weight:400;
+}
+.hero-actions{display:flex; gap:16px; margin-top:44px; flex-wrap:wrap;}
+.hero-specs{
+  display:flex; gap:14px; margin-top:64px; flex-wrap:wrap;
+}
+.hero-specs .spec{background: rgba(234,242,248,0.06); border-color: var(--line-dark); color: var(--cream-soft);}
+.hero-specs .spec b{color: var(--flour);}
+
+.scroll-cue{
+  position:absolute; right:32px; bottom:36px; z-index:2;
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  color: var(--cream-soft); font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+}
+.scroll-cue .line{width:1px; height:46px; background: linear-gradient(var(--wheat), transparent); animation: scrolldrop 2.2s infinite var(--ease);}
+@keyframes scrolldrop{0%{transform:scaleY(0); transform-origin:top;} 50%{transform:scaleY(1); transform-origin:top;} 50.1%{transform-origin:bottom;} 100%{transform:scaleY(0); transform-origin:bottom;}}
+@media (max-width:640px){.scroll-cue{display:none;}}
+
+/* ============================================================
+   MARQUEE — marcas aliadas
+   ============================================================ */
+.marquee-wrap{
+  background: var(--espresso-2); border-top:1px solid var(--line-dark); border-bottom:1px solid var(--line-dark);
+  padding: 20px 0; overflow:hidden;
+}
+.marquee-track{display:flex; gap:64px; width:max-content; animation: marquee 32s linear infinite;}
+.marquee-track span{
+  font-family: var(--mono); font-size:13px; letter-spacing:.1em; text-transform:uppercase;
+  color: var(--cream-soft); opacity:.75; white-space:nowrap;
+}
+@keyframes marquee{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+/* ============================================================
+   AUTORIDAD
+   ============================================================ */
+.authority{
+  background: var(--espresso); color: var(--cream-text);
+  padding: 130px 0 110px; position:relative;
+}
+.authority-grid{display:grid; grid-template-columns: 1.1fr 0.9fr; gap:80px; align-items:start;}
+@media (max-width: 900px){.authority-grid{grid-template-columns:1fr; gap:56px;}}
+.authority h2{font-size: clamp(30px,4vw,48px); color:var(--flour); margin-top:20px; max-width:15ch;}
+.authority h2 i{color:var(--wheat-lt); font-style:italic;}
+.authority p.lead{margin-top:24px; font-size:17px; color:var(--cream-soft); max-width:56ch;}
+.stat-list{display:flex; flex-direction:column; gap:0;}
+.stat-row{
+  display:flex; align-items:baseline; gap:24px; padding:26px 0;
+  border-bottom:1px solid var(--line-dark);
+}
+.stat-row:first-child{border-top:1px solid var(--line-dark);}
+.stat-num{font-family:var(--serif); font-size:52px; font-weight:600; color:var(--wheat-lt); min-width:120px;}
+.stat-label{font-size:14px; color:var(--cream-soft); max-width:32ch;}
+
+/* ============================================================
+   VALUE CHAIN — elemento firma
+   ============================================================ */
+.chain{
+  background: var(--flour-dim); padding: 100px 0 110px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.chain-head{max-width:640px; margin-bottom:64px;}
+.chain-head h2{font-size:clamp(28px,3.6vw,42px); margin-top:18px;}
+.chain-head p{margin-top:18px; color:var(--ink-soft); font-size:16.5px;}
+.chain-row{
+  display:grid; grid-template-columns: repeat(4, 1fr); gap:0; position:relative;
+}
+@media (max-width: 880px){.chain-row{grid-template-columns:1fr; gap:36px;}}
+.chain-row::before{
+  content:''; position:absolute; top:34px; left:6%; right:6%; height:1px;
+  background: repeating-linear-gradient(90deg, var(--wheat) 0 8px, transparent 8px 16px);
+  opacity:.6;
+}
+@media (max-width:880px){.chain-row::before{display:none;}}
+.chain-step{position:relative; padding-right:28px;}
+.chain-step .num{
+  font-family:var(--mono); font-size:12px; color:var(--paprika); display:flex; align-items:center; gap:12px; margin-bottom:22px;
+}
+.chain-step .num .ring{
+  width:14px; height:14px; border-radius:50%; border:2px solid var(--paprika); background:var(--flour-dim); position:relative; z-index:1;
+}
+.chain-step h3{font-size:19px; margin-bottom:10px;}
+.chain-step p{font-size:14.5px; color:var(--ink-soft);}
+
+/* ============================================================
+   SEGMENTOS
+   ============================================================ */
+.segments{padding: 120px 0; background:var(--flour);}
+.section-head{max-width:680px; margin-bottom: 64px;}
+.section-head h2{font-size: clamp(30px,4.2vw,48px); margin-top:18px;}
+.section-head h2 i{font-style:italic; color:var(--paprika); font-weight:500;}
+.section-head p{margin-top:20px; font-size:17px; color:var(--ink-soft);}
+
+.segment-featured{
+  display:grid; grid-template-columns: 1fr 1fr; gap:0; border:1px solid var(--line); margin-bottom:28px;
+  background:var(--paper);
+}
+@media (max-width:880px){.segment-featured{grid-template-columns:1fr;}}
+.segment-featured .media{
+  min-height:420px;
+  background: url('assets/images/segments/segment_alimento_balanceado.jpg') center/cover no-repeat,
+              linear-gradient(150deg, #0f3a52, #082334);
+  position:relative;
+}
+.segment-featured .media .tag{
+  position:absolute; top:24px; left:24px; background:var(--paprika); color:#fff;
+  font-family:var(--mono); font-size:11px; letter-spacing:.1em; padding:7px 12px; text-transform:uppercase;
+}
+.segment-featured .body{padding: 52px 52px; display:flex; flex-direction:column; justify-content:center;}
+.segment-featured h3{font-size: clamp(24px,2.6vw,34px); margin: 14px 0 16px;}
+.segment-featured p{color:var(--ink-soft); font-size:16px; margin-bottom:22px;}
+.chiplist{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+
+.segment-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media (max-width:900px){.segment-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.segment-grid{grid-template-columns:1fr;}}
+.segment-card{
+  border:1px solid var(--line); background:var(--paper); overflow:hidden;
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.segment-card:hover{transform: translateY(-6px); box-shadow: 0 30px 50px -30px rgba(16,32,46,.35);}
+.segment-card .media{height:200px; position:relative;}
+.sc-ganaderia .media{background:url('assets/images/segments/segment_ganaderia_avicultura.jpg') center/cover, linear-gradient(150deg,#156b5e,#0b3556);}
+.sc-agroindustria .media{background:url('assets/images/segments/segment_agroindustria_poscosecha.jpg') center/cover, linear-gradient(150deg,#2e6f9e,#123049);}
+.sc-acuicultura .media{background:url('assets/images/segments/segment_acuicultura.jpg') center/cover, linear-gradient(150deg,#0b3556,#123f66);}
+.segment-card .body{padding:26px 26px 30px;}
+.segment-card h4{font-size:19px; margin-bottom:10px;}
+.segment-card p{font-size:14.5px; color:var(--ink-soft); margin-bottom:16px;}
+.segment-card a.more{font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--paprika); display:inline-flex; gap:6px; align-items:center;}
+
+/* ============================================================
+   PRODUCTOS — dossier técnico
+   ============================================================ */
+.products{padding:120px 0 100px; background: var(--flour-dim); border-top:1px solid var(--line);}
+.tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:48px; border-bottom:1px solid var(--line); padding-bottom: 0;}
+.tab-btn{
+  font-family:var(--mono); font-size:12.5px; letter-spacing:.05em; text-transform:uppercase;
+  padding: 14px 4px; margin-right: 30px; background:none; border:none; cursor:pointer;
+  color: var(--ink-soft); position:relative; top:1px; border-bottom: 2px solid transparent;
+  transition: color .3s, border-color .3s;
+}
+.tab-btn.active, .tab-btn:hover{color:var(--ink); border-color: var(--paprika);}
+
+.panel{display:none;}
+.panel.active{display:block; animation: fadein .5s var(--ease);}
+@keyframes fadein{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
+
+.panel-grid{display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:flex-start;}
+@media (max-width:900px){.panel-grid{grid-template-columns:1fr;}}
+.panel-media{
+  height:100%; min-height:360px; position:relative; border:1px solid var(--line);
+}
+.pm-1{background:url('assets/images/products/product_1.jpg') center/cover, linear-gradient(155deg,#1b8a7a,#0f5c50);}
+.pm-2{background:url('assets/images/products/product_2.jpg') center/cover, linear-gradient(155deg,#2e6f9e,#123049);}
+.pm-3{background:url('assets/images/products/product_3.jpg') center/cover, linear-gradient(155deg,#e8862b,#a15a12);}
+.pm-4{background:url('assets/images/products/product_4.jpg') center/cover, linear-gradient(155deg,#3fb39e,#0f5c50);}
+.panel-media .caption{
+  position:absolute; left:0; right:0; bottom:0; padding:20px 22px;
+  background: linear-gradient(180deg, transparent, rgba(11,53,86,0.88));
+  color:var(--flour); font-family:var(--mono); font-size:12px; letter-spacing:.05em;
+}
+
+.ing-list{display:flex; flex-direction:column;}
+.ing{
+  display:grid; grid-template-columns: 1fr auto; gap:14px 20px; align-items:start;
+  padding: 22px 0; border-bottom:1px solid var(--line);
+}
+.ing:first-child{padding-top:0;}
+.ing h4{font-size:17px; margin-bottom:6px;}
+.ing p{font-size:14px; color:var(--ink-soft); grid-column: 1 / -1;}
+.ing .spec{justify-self:end;}
+
+/* ============================================================
+   IMPACTO
+   ============================================================ */
+.impact{padding:130px 0; background: var(--espresso); color:var(--cream-text); position:relative; overflow:hidden;}
+.impact::before{
+  content:''; position:absolute; inset:0;
+  background: url('assets/images/backgrounds/bg_section_1.jpg') center/cover no-repeat;
+  opacity:0.14; mix-blend-mode:luminosity;
+}
+.impact-inner{position:relative; z-index:1;}
+.impact-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-dark); border:1px solid var(--line-dark); margin-top:60px;}
+@media (max-width:900px){.impact-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.impact-grid{grid-template-columns:1fr;}}
+.impact-card{background:var(--espresso); padding:36px 30px;}
+.impact-card .icn{width:34px; height:34px; margin-bottom:22px; color:var(--wheat-lt);}
+.impact-card h4{font-size:17px; color:var(--flour); margin-bottom:10px; font-weight:600; font-family:var(--sans);}
+.impact-card p{font-size:14px; color:var(--cream-soft);}
+
+/* ============================================================
+   TESTIMONIAL / TRUST STRIP
+   ============================================================ */
+.trust{padding:90px 0; background:var(--flour); border-bottom:1px solid var(--line);}
+.trust blockquote{
+  font-family:var(--serif); font-size:clamp(22px,2.8vw,32px); font-weight:500; font-style:italic;
+  max-width:900px; color:var(--ink); line-height:1.4;
+}
+.trust cite{display:block; margin-top:26px; font-style:normal; font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); letter-spacing:.04em;}
+
+/* ============================================================
+   CTA FINAL
+   ============================================================ */
+.cta-final{
+  position:relative; padding:150px 0 130px; background: var(--espresso); color:var(--cream-text); overflow:hidden;
+}
+.cta-final::before{
+  content:''; position:absolute; inset:0;
+  background: url('assets/images/backgrounds/bg_section_2.jpg') center/cover no-repeat,
+    radial-gradient(90% 70% at 80% 20%, rgba(232,134,43,0.18), transparent 60%);
+  opacity:.9;
+}
+.cta-inner{position:relative; z-index:1; max-width:780px;}
+.cta-final h2{font-size:clamp(34px,5vw,64px); color:var(--flour);}
+.cta-final h2 i{color:var(--wheat-lt); font-style:italic;}
+.cta-final p.lead{margin:26px 0 40px; font-size:18px; color:var(--cream-soft); max-width:56ch;}
+.cta-row{display:flex; gap:18px; flex-wrap:wrap;}
+.cta-contacts{display:flex; gap:40px; margin-top:64px; flex-wrap:wrap; border-top:1px solid var(--line-dark); padding-top:34px;}
+.cta-contacts div{font-size:13.5px;}
+.cta-contacts .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--wheat-lt); margin-bottom:8px; display:block;}
+.cta-contacts a{color:var(--cream-text); font-weight:600;}
+.cta-contacts a:hover{color:var(--wheat-lt);}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--espresso-2); color:var(--cream-soft); padding:44px 0; border-top:1px solid var(--line-dark);}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+.footer-inner .logo{font-size:17px;}
+footer p{font-size:12.5px;}
+
+a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="#inicio" class="logo">ADITMEX <em>agropecuario</em></a>
+    <nav class="nav-links">
+      <a href="#autoridad">Trayectoria</a>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#productos">Portafolio</a>
+      <a href="#impacto">Resultados</a>
+      <a href="#contacto" class="btn btn-primary nav-cta">Solicitar asesoría</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media"></div>
+  <canvas id="grain-canvas"></canvas>
+  <div class="container hero-inner">
+    <div class="eyebrow hero-eyebrow reveal">Materias primas para el sector agropecuario</div>
+    <h1 class="reveal" style="--d:.08s">Lo que sostiene a su hato o su línea de producción <i>empieza en la fórmula correcta.</i></h1>
+    <p class="hero-sub reveal" style="--d:.16s">Más de una década suministrando a la industria alimentaria mexicana conservadores, acidulantes, espesantes y aditivos funcionales. Hoy ponemos ese mismo catálogo y esa misma disciplina técnica al servicio de la nutrición animal, la agroindustria y la poscosecha.</p>
+    <div class="hero-actions reveal" style="--d:.24s">
+      <a href="#contacto" class="btn btn-primary">Solicitar cotización <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#productos" class="btn btn-ghost">Ver portafolio técnico</a>
+    </div>
+    <div class="hero-specs reveal" style="--d:.32s">
+      <span class="spec"><span class="dot"></span>+<b>40</b> materias primas disponibles</span>
+      <span class="spec"><span class="dot"></span><b>10+</b> años en la industria</span>
+      <span class="spec"><span class="dot"></span>Respuesta en <b>&lt;24 h</b></span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>DESPLÁCESE</span><span class="line"></span></div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>ENSIGN</span><span>RZBC</span><span>FUFENG</span><span>WANNIANHUO</span><span>ALTRAFINE GUMS</span><span>BASF</span>
+    <span>ENSIGN</span><span>RZBC</span><span>FUFENG</span><span>WANNIANHUO</span><span>ALTRAFINE GUMS</span><span>BASF</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     AUTORIDAD
+============================================================ -->
+<section class="authority" id="autoridad">
+  <div class="container authority-grid">
+    <div>
+      <div class="eyebrow reveal">Quiénes somos</div>
+      <h2 class="reveal" style="--d:.05s">Una década formulando <i>confiabilidad</i>, ahora también para el campo mexicano.</h2>
+      <p class="lead reveal" style="--d:.1s">ADITMEX es una comercializadora especializada en materias primas para las industrias de alimentos, aromas, cosmética e industrial en México. Las mismas categorías con las que hoy respaldamos a plantas de alimentos — conservadores, acidulantes, espesantes, glicoles y derivados — tienen aplicación directa en nutrición animal, conservación de forraje y procesamiento agroindustrial.</p>
+      <p class="lead reveal" style="--d:.15s">Detrás de cada pedido hay asesoría técnica real sobre función y aplicación, respaldada por alianzas con proveedores globales de talla industrial.</p>
+    </div>
+    <div class="stat-list">
+      <div class="stat-row reveal" style="--d:.05s"><span class="stat-num">10+</span><span class="stat-label">Años abasteciendo a la industria alimentaria mexicana con continuidad de suministro.</span></div>
+      <div class="stat-row reveal" style="--d:.1s"><span class="stat-num">4</span><span class="stat-label">Sectores industriales atendidos: alimentos, aromas, cosmética e industrial.</span></div>
+      <div class="stat-row reveal" style="--d:.15s"><span class="stat-num">40+</span><span class="stat-label">Materias primas y aditivos funcionales disponibles de forma inmediata.</span></div>
+      <div class="stat-row reveal" style="--d:.2s"><span class="stat-num">100%</span><span class="stat-label">Compromiso con calidad, trazabilidad y tiempos de entrega.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VALUE CHAIN — elemento firma
+============================================================ -->
+<section class="chain">
+  <div class="container">
+    <div class="chain-head">
+      <div class="eyebrow reveal">Cómo trabajamos</div>
+      <h2 class="reveal" style="--d:.05s">Del campo a la fórmula que sostiene su producción</h2>
+      <p class="reveal" style="--d:.1s">Cuatro etapas donde ADITMEX interviene con ingredientes funcionales y asesoría de aplicación, para que su equipo técnico o de nutrición no tenga que resolverlas solo.</p>
+    </div>
+    <div class="chain-row">
+      <div class="chain-step reveal" style="--d:.05s">
+        <div class="num"><span class="ring"></span>01 · Materia prima</div>
+        <h3>Granos y derivados</h3>
+        <p>Almidones, harinas y derivados del maíz que sirven como base y excipiente en premezclas, pellets y alimento balanceado.</p>
+      </div>
+      <div class="chain-step reveal" style="--d:.12s">
+        <div class="num"><span class="ring"></span>02 · Conservación</div>
+        <h3>Conservadores y antioxidantes</h3>
+        <p>Sustancias que inhiben hongos, mohos y oxidación en forraje, granos almacenados y grasas del alimento animal.</p>
+      </div>
+      <div class="chain-step reveal" style="--d:.19s">
+        <div class="num"><span class="ring"></span>03 · Funcionalidad</div>
+        <h3>Acidulantes y espesantes</h3>
+        <p>Control de pH en agua de bebida y premezclas líquidas; gomas y espesantes para uniformidad y estabilidad.</p>
+      </div>
+      <div class="chain-step reveal" style="--d:.26s">
+        <div class="num"><span class="ring"></span>04 · Desempeño</div>
+        <h3>Glicoles, aceites y derivados</h3>
+        <p>Aporte energético y palatabilidad — desde el soporte metabólico en transición de ganado lechero hasta saborizantes naturales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEGMENTOS
+============================================================ -->
+<section class="segments" id="segmentos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow reveal">A quién servimos</div>
+      <h2 class="reveal" style="--d:.05s">Soluciones para cada <i>eslabón</i> del sector agropecuario</h2>
+      <p class="reveal" style="--d:.1s">De la nutrición animal a la poscosecha, formulamos con la misma disciplina técnica que aplicamos en la industria alimentaria — adaptada a los retos específicos del campo.</p>
+    </div>
+
+    <div class="segment-featured reveal">
+      <div class="media"><span class="tag">Segmento prioritario</span></div>
+      <div class="body">
+        <div class="eyebrow">Nutrición animal · Alimento balanceado y premezclas</div>
+        <h3>Consistencia nutricional, lote a lote, en cada tonelada de alimento</h3>
+        <p>Desde el excipiente que da cuerpo al pellet hasta el conservador que protege la grasa de la oxidación, formulamos junto a su equipo de nutrición para sostener palatabilidad, estabilidad y rendimiento en cada formulación.</p>
+        <div class="chiplist">
+          <span class="spec"><span class="dot"></span>Excipientes y derivados del maíz</span>
+          <span class="spec"><span class="dot"></span>Antioxidantes para grasas</span>
+          <span class="spec"><span class="dot"></span>Conservadores antifúngicos</span>
+          <span class="spec"><span class="dot"></span>Saborizantes naturales</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="segment-grid">
+      <div class="segment-card sc-ganaderia reveal" style="--d:.05s">
+        <div class="media"></div>
+        <div class="body">
+          <h4>Ganadería y avicultura</h4>
+          <p>Acidulantes para agua de bebida, glicoles para soporte energético y espesantes para suplementos líquidos.</p>
+          <a href="#contacto" class="more">Cotizar segmento <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="segment-card sc-agroindustria reveal" style="--d:.1s">
+        <div class="media"></div>
+        <div class="body">
+          <h4>Agroindustria y poscosecha</h4>
+          <p>Conservadores y antioxidantes para extender la vida útil de granos, frutas y hortalizas almacenados.</p>
+          <a href="#contacto" class="more">Cotizar segmento <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="segment-card sc-acuicultura reveal" style="--d:.15s">
+        <div class="media"></div>
+        <div class="body">
+          <h4>Acuicultura</h4>
+          <p>Espesantes, aglutinantes y conservadores para premezclas y alimento flotante o de hundimiento lento.</p>
+          <a href="#contacto" class="more">Cotizar segmento <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTOS — dossier técnico con tabs
+============================================================ -->
+<section class="products" id="productos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow reveal">Portafolio técnico</div>
+      <h2 class="reveal" style="--d:.05s">Ficha técnica de <i>insumos</i> para el sector agropecuario</h2>
+      <p class="reveal" style="--d:.1s">Función, beneficio y aplicación de cada insumo — la misma información que comparte nuestro equipo técnico antes de una cotización.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="p1">Conservación y almacenamiento</button>
+      <button class="tab-btn" data-tab="p2">Nutrición y textura</button>
+      <button class="tab-btn" data-tab="p3">Acidulantes y control de pH</button>
+      <button class="tab-btn" data-tab="p4">Glicoles, aceites y derivados</button>
+    </div>
+
+    <!-- Panel 1: Conservación y almacenamiento -->
+    <div class="panel active" id="p1">
+      <div class="panel-grid">
+        <div class="panel-media pm-1"><div class="caption">01 — CONSERVACIÓN</div></div>
+        <div class="ing-list">
+          <div class="ing reveal">
+            <h4>Propionato de calcio</h4>
+            <span class="spec">Categoría: Conservadores</span>
+            <p>Evita el crecimiento de hongos y mohos. Aplicable a la conservación de granos almacenados y componentes del alimento balanceado.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Sorbato de potasio</h4>
+            <span class="spec">Categoría: Conservadores</span>
+            <p>Inhibe el desarrollo de hongos y levaduras; útil en premezclas húmedas y suplementos líquidos que requieren estabilidad prolongada.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Benzoato de sodio</h4>
+            <span class="spec">Categoría: Conservadores</span>
+            <p>Conservador antimicrobiano de amplio uso, recomendado en formulaciones líquidas y medios con pH ácido.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Ácido ascórbico</h4>
+            <span class="spec">Categoría: Antioxidantes</span>
+            <p>Actúa como antioxidante y aporte de vitamina C en premezclas, ayudando a preservar la estabilidad de otros componentes sensibles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 2: Nutrición y textura -->
+    <div class="panel" id="p2">
+      <div class="panel-grid">
+        <div class="panel-media pm-2"><div class="caption">02 — NUTRICIÓN Y TEXTURA</div></div>
+        <div class="ing-list">
+          <div class="ing reveal">
+            <h4>Almidón de maíz</h4>
+            <span class="spec">Categoría: Derivados del maíz</span>
+            <p>Aporta estructura y actúa como excipiente en la elaboración de pellets y premezclas sólidas.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Goma xantana</h4>
+            <span class="spec">Categoría: Espesantes</span>
+            <p>Aporta cuerpo y viscosidad en suplementos y premezclas líquidas, evitando la separación de ingredientes.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Goma guar</h4>
+            <span class="spec">Categoría: Espesantes</span>
+            <p>Mejora la retención de humedad y la textura uniforme en alimentos húmedos y suplementos en gel.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>CMC (carboximetilcelulosa)</h4>
+            <span class="spec">Categoría: Espesantes</span>
+            <p>Estabiliza y da consistencia a formulaciones líquidas, combinándose bien con otros hidrocoloides.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Edulcorantes</h4>
+            <span class="spec">Categoría: Edulcorantes</span>
+            <p>Mejoran la palatabilidad de premezclas y suplementos, favoreciendo el consumo voluntario del animal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 3: Acidulantes y control de pH -->
+    <div class="panel" id="p3">
+      <div class="panel-grid">
+        <div class="panel-media pm-3"><div class="caption">03 — CONTROL DE PH</div></div>
+        <div class="ing-list">
+          <div class="ing reveal">
+            <h4>Ácido cítrico</h4>
+            <span class="spec">Categoría: Acidulantes</span>
+            <p>Ajusta el pH en agua de bebida y formulaciones líquidas; uso extendido como acidificante natural.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Acidulantes de línea</h4>
+            <span class="spec">Categoría: Acidulantes</span>
+            <p>Portafolio de acidulantes para ajuste de pH en agua y alimento, según la formulación y especie objetivo.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Por qué importa el pH</h4>
+            <span class="spec">Nota técnica</span>
+            <p>El control de pH en agua de bebida es una práctica habitual en avicultura y porcicultura para favorecer un ambiente digestivo menos propicio a patógenos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 4: Glicoles, aceites y derivados -->
+    <div class="panel" id="p4">
+      <div class="panel-grid">
+        <div class="panel-media pm-4"><div class="caption">04 — DESEMPEÑO</div></div>
+        <div class="ing-list">
+          <div class="ing reveal">
+            <h4>Glicoles</h4>
+            <span class="spec">Categoría: Glicoles</span>
+            <p>El propilenglicol es ampliamente utilizado como fuente de energía en dietas de transición de ganado lechero; consulte con su nutriólogo la aplicación específica.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Aceite esencial de naranja CP</h4>
+            <span class="spec">Prensado en frío</span>
+            <p>Saborizante natural cítrico, componente principal d-Limoneno, útil para mejorar la palatabilidad de premezclas y suplementos.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Derivados de ácidos grasos</h4>
+            <span class="spec">Categoría: Derivados de ácidos grasos</span>
+            <p>Fuente energética concentrada y funcional para formulaciones que buscan mayor densidad calórica.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Aceites naturales</h4>
+            <span class="spec">Categoría: Aceites naturales</span>
+            <p>Portafolio de aceites naturales para vehiculizar principios activos o aportar energía en premezclas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     IMPACTO
+============================================================ -->
+<section class="impact" id="impacto">
+  <div class="impact-inner container">
+    <div class="eyebrow reveal">Resultados</div>
+    <h2 class="reveal" style="--d:.05s; color:var(--flour); font-size:clamp(28px,4vw,44px); max-width:22ch;">Lo que gana su operación al trabajar con ADITMEX</h2>
+    <div class="impact-grid">
+      <div class="impact-card reveal" style="--d:.05s">
+        <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <h4>Consistencia lote a lote</h4>
+        <p>Insumos con función documentada para que cada premezcla o formulación se comporte igual que la anterior.</p>
+      </div>
+      <div class="impact-card reveal" style="--d:.1s">
+        <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h4>Menos pérdidas por descomposición</h4>
+        <p>Conservadores y antioxidantes dosificados con criterio técnico para granos, forraje y grasas almacenadas.</p>
+      </div>
+      <div class="impact-card reveal" style="--d:.15s">
+        <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
+        <h4>Asesoría técnica real</h4>
+        <p>Recomendaciones de función y aplicación antes de cotizar, no después de un problema en granja o planta.</p>
+      </div>
+      <div class="impact-card reveal" style="--d:.05s">
+        <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12l8.73-5.04M12 22.08V12"/></svg>
+        <h4>Respaldo de marcas globales</h4>
+        <p>Alianzas con proveedores como BASF, Fufeng, Ensign y RZBC para insumos de calidad consistente.</p>
+      </div>
+      <div class="impact-card reveal" style="--d:.1s">
+        <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/></svg>
+        <h4>Respuesta en menos de 24 horas</h4>
+        <p>Disponibilidad y precio confirmados con rapidez, para que el ciclo productivo no se detenga por falta de insumo.</p>
+      </div>
+      <div class="impact-card reveal" style="--d:.15s">
+        <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7h-9M14 17H5M17 4l3 3-3 3M7 14l-3 3 3 3"/></svg>
+        <h4>Un solo proveedor, todo el proceso</h4>
+        <p>Conservación, textura, control de pH y desempeño energético — un portafolio técnico en un solo lugar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST STRIP
+============================================================ -->
+<section class="trust">
+  <div class="container">
+    <div class="eyebrow reveal">Compromiso técnico</div>
+    <blockquote class="reveal" style="--d:.08s">"La diferencia entre un insumo y una solución es la dosificación correcta, la disponibilidad puntual y alguien del otro lado que entienda su proceso — sea una planta o una granja."</blockquote>
+    <cite class="reveal" style="--d:.14s">— Equipo técnico ADITMEX</cite>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA FINAL
+============================================================ -->
+<section class="cta-final" id="contacto">
+  <div class="container cta-inner">
+    <div class="eyebrow reveal" style="color:var(--wheat-lt)">Siguiente paso</div>
+    <h2 class="reveal" style="--d:.05s">Hablemos de lo que su operación <i>necesita resolver.</i></h2>
+    <p class="lead reveal" style="--d:.1s">Cuéntenos qué está formulando y qué necesita resolver — conservación, textura, pH o desempeño energético. Respondemos con disponibilidad y precio en menos de 24 horas.</p>
+    <div class="cta-row reveal" style="--d:.15s">
+      <a href="mailto:ventas@aditmex.com.mx" class="btn btn-primary">Escribir a ventas@aditmex.com.mx</a>
+      <a href="https://wa.me/524435145662?text=Hola%2C%20me%20interesa%20cotizar%20materias%20primas%20para%20el%20sector%20agropecuario" class="btn btn-ghost" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+    <div class="cta-contacts reveal" style="--d:.2s">
+      <div><span class="lbl">Oficina</span>Santos Degollado 595, Nueva Chapultepec, 58280 Morelia, Mich.</div>
+      <div><span class="lbl">Almacén</span>Guillermo Massieu Helguera 34, Bodega A, CDMX</div>
+      <div><span class="lbl">Teléfono</span><a href="tel:+524435145662">+52 443 514 5662</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span class="logo">ADITMEX</span>
+    <p>© 2026 ADITMEX S. de R.L. — Distribuidora de materias primas para la industria de alimentos, aromas, cosmética, industrial y agropecuaria en México.</p>
+  </div>
+</footer>
+
+<script>
+// ---------- Sticky nav ----------
+const nav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 60);
+}, {passive:true});
+
+// ---------- Scroll reveal ----------
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+revealEls.forEach(el => io.observe(el));
+
+// ---------- Tabs ----------
+const tabBtns = document.querySelectorAll('.tab-btn');
+const panels = document.querySelectorAll('.panel');
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    document.getElementById(btn.dataset.tab).querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  });
+});
+
+// ---------- Ambient particle canvas on hero ----------
+(function(){
+  const canvas = document.getElementById('grain-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function resize(){
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  function init(){
+    resize();
+    particles = Array.from({length: Math.min(60, Math.floor(canvas.width/22))}, () => ({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      r: Math.random()*1.6 + 0.4,
+      s: Math.random()*0.25 + 0.05,
+      o: Math.random()*0.5 + 0.15
+    }));
+  }
+  function tick(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = '#6FA8CC';
+    particles.forEach(p => {
+      p.y += p.s;
+      if(p.y > canvas.height){ p.y = -4; p.x = Math.random()*canvas.width; }
+      ctx.globalAlpha = p.o;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('resize', resize);
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    init(); tick();
+  }
+})();
+</script>
+</body>
+</html>
