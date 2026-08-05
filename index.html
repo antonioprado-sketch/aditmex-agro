@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADITMEX · Materias primas para el sector agropecuario</title>
-<meta name="description" content="ADITMEX. Conservadores, acidulantes, espesantes y aditivos funcionales para nutrición animal, agroindustria y poscosecha. Respaldo técnico para el campo mexicano.">
+<title>ADITMEX · Materias primas para eficiencia y personalización de fertilizantes</title>
+<meta name="description" content="ADITMEX. Espesantes, acidulantes, aglutinantes y adyuvantes para fabricantes y mezcladores de fertilizantes. Más rendimiento, formulación a la medida de cada cliente.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   ADITMEX — Design tokens (sector agropecuario)
-   Concepto: "Del campo a la fórmula"
+   ADITMEX — Design tokens (fertilizantes: eficiencia y a medida)
+   Concepto: "La materia prima detrás del fertilizante"
    ------------------------------------------------------------
    ESTIMACIÓN VISUAL — no verificada contra el sitio real.
    No se pudo leer el CSS ni decodificar imágenes de aditmex.com.mx
    con las herramientas disponibles. Misma paleta institucional
-   estimada usada en la versión de panificación, para mantener
-   consistencia de marca entre landing pages. Sustituye estos
-   valores en cuanto tengas los HEX oficiales de ADITMEX.
+   estimada usada en las demás landing pages, para mantener
+   consistencia de marca. Sustituye estos valores en cuanto
+   tengas los HEX oficiales de ADITMEX.
    ============================================================ */
 :root{
   --flour:      #EEF3F7;   /* base clara institucional */
@@ -197,13 +197,13 @@ header.nav.solid{
 .hero-inner{position:relative; z-index:2; padding: 120px 0 84px;}
 .hero-eyebrow{color: var(--wheat-lt); margin-bottom:26px;}
 .hero h1{
-  font-size: clamp(38px, 6vw, 86px);
-  max-width: 16ch;
+  font-size: clamp(38px, 5.6vw, 80px);
+  max-width: 17ch;
   color: var(--flour);
 }
 .hero h1 i{ color: var(--wheat-lt); font-style:italic; font-weight:500;}
 .hero-sub{
-  max-width:580px; margin-top:26px; font-size:19px; color: var(--cream-soft); font-weight:400;
+  max-width:600px; margin-top:26px; font-size:19px; color: var(--cream-soft); font-weight:400;
 }
 .hero-actions{display:flex; gap:16px; margin-top:44px; flex-wrap:wrap;}
 .hero-specs{
@@ -262,7 +262,7 @@ header.nav.solid{
 .chain{
   background: var(--flour-dim); padding: 100px 0 110px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
 }
-.chain-head{max-width:640px; margin-bottom:64px;}
+.chain-head{max-width:660px; margin-bottom:64px;}
 .chain-head h2{font-size:clamp(28px,3.6vw,42px); margin-top:18px;}
 .chain-head p{margin-top:18px; color:var(--ink-soft); font-size:16.5px;}
 .chain-row{
@@ -301,7 +301,7 @@ header.nav.solid{
 @media (max-width:880px){.segment-featured{grid-template-columns:1fr;}}
 .segment-featured .media{
   min-height:420px;
-  background: url('assets/images/segments/segment_alimento_balanceado.jpg') center/cover no-repeat,
+  background: url('assets/images/segments/segment_fertilizantes_liquidos.jpg') center/cover no-repeat,
               linear-gradient(150deg, #0f3a52, #082334);
   position:relative;
 }
@@ -323,9 +323,9 @@ header.nav.solid{
 }
 .segment-card:hover{transform: translateY(-6px); box-shadow: 0 30px 50px -30px rgba(16,32,46,.35);}
 .segment-card .media{height:200px; position:relative;}
-.sc-ganaderia .media{background:url('assets/images/segments/segment_ganaderia_avicultura.jpg') center/cover, linear-gradient(150deg,#156b5e,#0b3556);}
-.sc-agroindustria .media{background:url('assets/images/segments/segment_agroindustria_poscosecha.jpg') center/cover, linear-gradient(150deg,#2e6f9e,#123049);}
-.sc-acuicultura .media{background:url('assets/images/segments/segment_acuicultura.jpg') center/cover, linear-gradient(150deg,#0b3556,#123f66);}
+.sc-granulados .media{background:url('assets/images/segments/segment_fertilizantes_granulados.jpg') center/cover, linear-gradient(150deg,#2e6f9e,#123049);}
+.sc-adyuvantes .media{background:url('assets/images/segments/segment_adyuvantes.jpg') center/cover, linear-gradient(150deg,#156b5e,#0b3556);}
+.sc-biofertilizantes .media{background:url('assets/images/segments/segment_biofertilizantes.jpg') center/cover, linear-gradient(150deg,#0b3556,#123f66);}
 .segment-card .body{padding:26px 26px 30px;}
 .segment-card h4{font-size:19px; margin-bottom:10px;}
 .segment-card p{font-size:14.5px; color:var(--ink-soft); margin-bottom:16px;}
@@ -442,10 +442,10 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
 ============================================================ -->
 <header class="nav" id="siteNav">
   <div class="container nav-inner">
-    <a href="#inicio" class="logo">ADITMEX <em>agropecuario</em></a>
+    <a href="#inicio" class="logo">ADITMEX <em>fertilizantes</em></a>
     <nav class="nav-links">
       <a href="#autoridad">Trayectoria</a>
-      <a href="#segmentos">Segmentos</a>
+      <a href="#segmentos">Aplicaciones</a>
       <a href="#productos">Portafolio</a>
       <a href="#impacto">Resultados</a>
       <a href="#contacto" class="btn btn-primary nav-cta">Solicitar asesoría</a>
@@ -460,9 +460,9 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
   <div class="hero-media"></div>
   <canvas id="grain-canvas"></canvas>
   <div class="container hero-inner">
-    <div class="eyebrow hero-eyebrow reveal">Materias primas para el sector agropecuario</div>
-    <h1 class="reveal" style="--d:.08s">Lo que sostiene a su hato o su línea de producción <i>empieza en la fórmula correcta.</i></h1>
-    <p class="hero-sub reveal" style="--d:.16s">Más de una década suministrando a la industria alimentaria mexicana conservadores, acidulantes, espesantes y aditivos funcionales. Hoy ponemos ese mismo catálogo y esa misma disciplina técnica al servicio de la nutrición animal, la agroindustria y la poscosecha.</p>
+    <div class="eyebrow hero-eyebrow reveal">Materias primas para fabricantes de fertilizantes</div>
+    <h1 class="reveal" style="--d:.08s">No vendemos fertilizantes. Ayudamos a que el suyo <i>rinda más y se ajuste a cada cliente.</i></h1>
+    <p class="hero-sub reveal" style="--d:.16s">Más de una década suministrando a la industria alimentaria mexicana espesantes, acidulantes, aglutinantes y derivados funcionales. Ese mismo catálogo hoy resuelve dos problemas concretos para fabricantes y mezcladores de fertilizantes: mejorar la eficiencia de la fórmula y personalizarla para cada cultivo o cliente.</p>
     <div class="hero-actions reveal" style="--d:.24s">
       <a href="#contacto" class="btn btn-primary">Solicitar cotización <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="#productos" class="btn btn-ghost">Ver portafolio técnico</a>
@@ -490,8 +490,8 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
   <div class="container authority-grid">
     <div>
       <div class="eyebrow reveal">Quiénes somos</div>
-      <h2 class="reveal" style="--d:.05s">Una década formulando <i>confiabilidad</i>, ahora también para el campo mexicano.</h2>
-      <p class="lead reveal" style="--d:.1s">ADITMEX es una comercializadora especializada en materias primas para las industrias de alimentos, aromas, cosmética e industrial en México. Las mismas categorías con las que hoy respaldamos a plantas de alimentos — conservadores, acidulantes, espesantes, glicoles y derivados — tienen aplicación directa en nutrición animal, conservación de forraje y procesamiento agroindustrial.</p>
+      <h2 class="reveal" style="--d:.05s">Una década formulando <i>confiabilidad</i>, ahora al servicio de quien fabrica el fertilizante.</h2>
+      <p class="lead reveal" style="--d:.1s">ADITMEX es una comercializadora especializada en materias primas para las industrias de alimentos, aromas, cosmética e industrial en México. No fabricamos fertilizantes — suministramos las materias primas funcionales que sus formuladores usan para resolver problemas muy concretos: sedimentación en productos líquidos, pérdida de nutrientes, baja adherencia foliar o la necesidad de una mezcla distinta para cada cliente.</p>
       <p class="lead reveal" style="--d:.15s">Detrás de cada pedido hay asesoría técnica real sobre función y aplicación, respaldada por alianzas con proveedores globales de talla industrial.</p>
     </div>
     <div class="stat-list">
@@ -510,83 +510,82 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
   <div class="container">
     <div class="chain-head">
       <div class="eyebrow reveal">Cómo trabajamos</div>
-      <h2 class="reveal" style="--d:.05s">Del campo a la fórmula que sostiene su producción</h2>
-      <p class="reveal" style="--d:.1s">Cuatro etapas donde ADITMEX interviene con ingredientes funcionales y asesoría de aplicación, para que su equipo técnico o de nutrición no tenga que resolverlas solo.</p>
+      <h2 class="reveal" style="--d:.05s">Cuatro problemas técnicos que resolvemos en su fórmula</h2>
+      <p class="reveal" style="--d:.1s">No reemplazamos su fórmula base — la reforzamos donde suele fallar: estabilidad, disponibilidad de nutriente, adherencia y aglutinación.</p>
     </div>
     <div class="chain-row">
       <div class="chain-step reveal" style="--d:.05s">
-        <div class="num"><span class="ring"></span>01 · Materia prima</div>
-        <h3>Granos y derivados</h3>
-        <p>Almidones, harinas y derivados del maíz que sirven como base y excipiente en premezclas, pellets y alimento balanceado.</p>
+        <div class="num"><span class="ring"></span>01 · Aglutinación</div>
+        <h3>Recubrimiento y gránulo</h3>
+        <p>Almidón de maíz y derivados como aglutinante o recubrimiento en fertilizantes granulados, para uniformidad de tamaño y menor generación de finos.</p>
       </div>
       <div class="chain-step reveal" style="--d:.12s">
-        <div class="num"><span class="ring"></span>02 · Conservación</div>
-        <h3>Conservadores y antioxidantes</h3>
-        <p>Sustancias que inhiben hongos, mohos y oxidación en forraje, granos almacenados y grasas del alimento animal.</p>
+        <div class="num"><span class="ring"></span>02 · Estabilidad</div>
+        <h3>Suspensión y homogeneidad</h3>
+        <p>Espesantes (goma xantana, guar, CMC) que evitan la sedimentación y separación de fases en fertilizantes líquidos y suspensiones.</p>
       </div>
       <div class="chain-step reveal" style="--d:.19s">
-        <div class="num"><span class="ring"></span>03 · Funcionalidad</div>
-        <h3>Acidulantes y espesantes</h3>
-        <p>Control de pH en agua de bebida y premezclas líquidas; gomas y espesantes para uniformidad y estabilidad.</p>
+        <div class="num"><span class="ring"></span>03 · Disponibilidad</div>
+        <h3>Ajuste de pH</h3>
+        <p>Acidulantes que ayudan a llevar la solución a un rango de pH donde el nutriente es más soluble y aprovechable por la planta.</p>
       </div>
       <div class="chain-step reveal" style="--d:.26s">
-        <div class="num"><span class="ring"></span>04 · Desempeño</div>
-        <h3>Glicoles, aceites y derivados</h3>
-        <p>Aporte energético y palatabilidad — desde el soporte metabólico en transición de ganado lechero hasta saborizantes naturales.</p>
+        <div class="num"><span class="ring"></span>04 · Adherencia</div>
+        <h3>Adyuvancia y absorción</h3>
+        <p>Aceites naturales y derivados de ácidos grasos que actúan como surfactantes, mejorando la adherencia foliar y reduciendo pérdida por escurrimiento.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     SEGMENTOS
+     SEGMENTOS / APLICACIONES
 ============================================================ -->
 <section class="segments" id="segmentos">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow reveal">A quién servimos</div>
-      <h2 class="reveal" style="--d:.05s">Soluciones para cada <i>eslabón</i> del sector agropecuario</h2>
-      <p class="reveal" style="--d:.1s">De la nutrición animal a la poscosecha, formulamos con la misma disciplina técnica que aplicamos en la industria alimentaria — adaptada a los retos específicos del campo.</p>
+      <div class="eyebrow reveal">Aplicaciones</div>
+      <h2 class="reveal" style="--d:.05s">Materias primas para cada <i>tipo</i> de fertilizante que usted fabrica</h2>
+      <p class="reveal" style="--d:.1s">Formulamos junto a su equipo técnico, no en su lugar. Estas son las tres familias donde nuestro catálogo suele marcar la diferencia.</p>
     </div>
 
     <div class="segment-featured reveal">
-      <div class="media"><span class="tag">Segmento prioritario</span></div>
+      <div class="media"><span class="tag">Aplicación prioritaria</span></div>
       <div class="body">
-        <div class="eyebrow">Nutrición animal · Alimento balanceado y premezclas</div>
-        <h3>Consistencia nutricional, lote a lote, en cada tonelada de alimento</h3>
-        <p>Desde el excipiente que da cuerpo al pellet hasta el conservador que protege la grasa de la oxidación, formulamos junto a su equipo de nutrición para sostener palatabilidad, estabilidad y rendimiento en cada formulación.</p>
+        <div class="eyebrow">Fertilizantes líquidos y en suspensión</div>
+        <h3>Que la fórmula llegue igual de homogénea al último litro del tambo</h3>
+        <p>La sedimentación y separación de fases son el problema técnico más común en fertilizantes líquidos y foliares. Nuestros espesantes y acidulantes ayudan a mantener la suspensión estable y el pH en el rango donde el nutriente es aprovechable — sin necesidad de rediseñar la fórmula completa.</p>
         <div class="chiplist">
-          <span class="spec"><span class="dot"></span>Excipientes y derivados del maíz</span>
-          <span class="spec"><span class="dot"></span>Antioxidantes para grasas</span>
-          <span class="spec"><span class="dot"></span>Conservadores antifúngicos</span>
-          <span class="spec"><span class="dot"></span>Saborizantes naturales</span>
+          <span class="spec"><span class="dot"></span>Espesantes (xantana, guar, CMC)</span>
+          <span class="spec"><span class="dot"></span>Acidulantes para pH</span>
+          <span class="spec"><span class="dot"></span>Formulación a la medida</span>
         </div>
       </div>
     </div>
 
     <div class="segment-grid">
-      <div class="segment-card sc-ganaderia reveal" style="--d:.05s">
+      <div class="segment-card sc-granulados reveal" style="--d:.05s">
         <div class="media"></div>
         <div class="body">
-          <h4>Ganadería y avicultura</h4>
-          <p>Acidulantes para agua de bebida, glicoles para soporte energético y espesantes para suplementos líquidos.</p>
-          <a href="#contacto" class="more">Cotizar segmento <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <h4>Fertilizantes granulados</h4>
+          <p>Almidón y derivados del maíz como aglutinante o recubrimiento, para gránulos más uniformes y menos pérdida por polvo.</p>
+          <a href="#contacto" class="more">Cotizar aplicación <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
-      <div class="segment-card sc-agroindustria reveal" style="--d:.1s">
+      <div class="segment-card sc-adyuvantes reveal" style="--d:.1s">
         <div class="media"></div>
         <div class="body">
-          <h4>Agroindustria y poscosecha</h4>
-          <p>Conservadores y antioxidantes para extender la vida útil de granos, frutas y hortalizas almacenados.</p>
-          <a href="#contacto" class="more">Cotizar segmento <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <h4>Adyuvantes y adherencia foliar</h4>
+          <p>Aceites naturales y derivados de ácidos grasos que mejoran la adherencia y absorción en aplicaciones foliares.</p>
+          <a href="#contacto" class="more">Cotizar aplicación <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
-      <div class="segment-card sc-acuicultura reveal" style="--d:.15s">
+      <div class="segment-card sc-biofertilizantes reveal" style="--d:.15s">
         <div class="media"></div>
         <div class="body">
-          <h4>Acuicultura</h4>
-          <p>Espesantes, aglutinantes y conservadores para premezclas y alimento flotante o de hundimiento lento.</p>
-          <a href="#contacto" class="more">Cotizar segmento <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <h4>Biofertilizantes y orgánicos</h4>
+          <p>Conservadores que ayudan a estabilizar formulaciones de base orgánica frente al deterioro microbiano.</p>
+          <a href="#contacto" class="more">Cotizar aplicación <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </div>
@@ -600,128 +599,108 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
   <div class="container">
     <div class="section-head">
       <div class="eyebrow reveal">Portafolio técnico</div>
-      <h2 class="reveal" style="--d:.05s">Ficha técnica de <i>insumos</i> para el sector agropecuario</h2>
-      <p class="reveal" style="--d:.1s">Función, beneficio y aplicación de cada insumo — la misma información que comparte nuestro equipo técnico antes de una cotización.</p>
+      <h2 class="reveal" style="--d:.05s">Ficha técnica de <i>insumos</i> para eficiencia y personalización</h2>
+      <p class="reveal" style="--d:.1s">Función, beneficio y consideración técnica de cada insumo — la misma información que comparte nuestro equipo antes de una cotización.</p>
     </div>
 
     <div class="tabs" role="tablist">
-      <button class="tab-btn active" data-tab="p1">Conservación y almacenamiento</button>
-      <button class="tab-btn" data-tab="p2">Nutrición y textura</button>
-      <button class="tab-btn" data-tab="p3">Acidulantes y control de pH</button>
-      <button class="tab-btn" data-tab="p4">Glicoles, aceites y derivados</button>
+      <button class="tab-btn active" data-tab="p1">Estabilidad y suspensión</button>
+      <button class="tab-btn" data-tab="p2">Recubrimiento y aglutinación</button>
+      <button class="tab-btn" data-tab="p3">Disponibilidad de nutrientes</button>
+      <button class="tab-btn" data-tab="p4">Adyuvantes y adherencia</button>
     </div>
 
-    <!-- Panel 1: Conservación y almacenamiento -->
+    <!-- Panel 1: Estabilidad y suspensión -->
     <div class="panel active" id="p1">
       <div class="panel-grid">
-        <div class="panel-media pm-1"><div class="caption">01 — CONSERVACIÓN</div></div>
+        <div class="panel-media pm-1"><div class="caption">01 — ESTABILIDAD</div></div>
         <div class="ing-list">
-          <div class="ing reveal">
-            <h4>Propionato de calcio</h4>
-            <span class="spec">Categoría: Conservadores</span>
-            <p>Evita el crecimiento de hongos y mohos. Aplicable a la conservación de granos almacenados y componentes del alimento balanceado.</p>
-          </div>
-          <div class="ing reveal">
-            <h4>Sorbato de potasio</h4>
-            <span class="spec">Categoría: Conservadores</span>
-            <p>Inhibe el desarrollo de hongos y levaduras; útil en premezclas húmedas y suplementos líquidos que requieren estabilidad prolongada.</p>
-          </div>
-          <div class="ing reveal">
-            <h4>Benzoato de sodio</h4>
-            <span class="spec">Categoría: Conservadores</span>
-            <p>Conservador antimicrobiano de amplio uso, recomendado en formulaciones líquidas y medios con pH ácido.</p>
-          </div>
-          <div class="ing reveal">
-            <h4>Ácido ascórbico</h4>
-            <span class="spec">Categoría: Antioxidantes</span>
-            <p>Actúa como antioxidante y aporte de vitamina C en premezclas, ayudando a preservar la estabilidad de otros componentes sensibles.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel 2: Nutrición y textura -->
-    <div class="panel" id="p2">
-      <div class="panel-grid">
-        <div class="panel-media pm-2"><div class="caption">02 — NUTRICIÓN Y TEXTURA</div></div>
-        <div class="ing-list">
-          <div class="ing reveal">
-            <h4>Almidón de maíz</h4>
-            <span class="spec">Categoría: Derivados del maíz</span>
-            <p>Aporta estructura y actúa como excipiente en la elaboración de pellets y premezclas sólidas.</p>
-          </div>
           <div class="ing reveal">
             <h4>Goma xantana</h4>
             <span class="spec">Categoría: Espesantes</span>
-            <p>Aporta cuerpo y viscosidad en suplementos y premezclas líquidas, evitando la separación de ingredientes.</p>
+            <p>Aporta cuerpo y viscosidad, ayudando a mantener en suspensión los sólidos de un fertilizante líquido y evitando su sedimentación en el envase.</p>
           </div>
           <div class="ing reveal">
             <h4>Goma guar</h4>
             <span class="spec">Categoría: Espesantes</span>
-            <p>Mejora la retención de humedad y la textura uniforme en alimentos húmedos y suplementos en gel.</p>
+            <p>Mejora la retención de agua y la consistencia de formulaciones líquidas y en gel, complementando a otros hidrocoloides.</p>
           </div>
           <div class="ing reveal">
             <h4>CMC (carboximetilcelulosa)</h4>
             <span class="spec">Categoría: Espesantes</span>
-            <p>Estabiliza y da consistencia a formulaciones líquidas, combinándose bien con otros hidrocoloides.</p>
-          </div>
-          <div class="ing reveal">
-            <h4>Edulcorantes</h4>
-            <span class="spec">Categoría: Edulcorantes</span>
-            <p>Mejoran la palatabilidad de premezclas y suplementos, favoreciendo el consumo voluntario del animal.</p>
+            <p>Da cuerpo y estabilidad a la fase líquida; combinado con goma xantana mejora la uniformidad de la suspensión final.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Panel 3: Acidulantes y control de pH -->
+    <!-- Panel 2: Recubrimiento y aglutinación -->
+    <div class="panel" id="p2">
+      <div class="panel-grid">
+        <div class="panel-media pm-2"><div class="caption">02 — AGLUTINACIÓN</div></div>
+        <div class="ing-list">
+          <div class="ing reveal">
+            <h4>Almidón de maíz</h4>
+            <span class="spec">Categoría: Derivados del maíz</span>
+            <p>Actúa como aglutinante en la formación de gránulos, ayudando a la cohesión de la mezcla y reduciendo la generación de polvo/finos en planta.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Derivados del maíz (línea)</h4>
+            <span class="spec">Categoría: Derivados del maíz</span>
+            <p>Portafolio de excipientes de origen vegetal usados como base o recubrimiento en presentaciones sólidas, según la formulación objetivo.</p>
+          </div>
+          <div class="ing reveal">
+            <h4>Por qué importa el gránulo uniforme</h4>
+            <span class="spec">Nota técnica</span>
+            <p>Un gránulo de tamaño consistente se dispersa de forma más pareja en campo y genera menos pérdida por segregación durante el manejo y transporte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 3: Disponibilidad de nutrientes -->
     <div class="panel" id="p3">
       <div class="panel-grid">
-        <div class="panel-media pm-3"><div class="caption">03 — CONTROL DE PH</div></div>
+        <div class="panel-media pm-3"><div class="caption">03 — DISPONIBILIDAD</div></div>
         <div class="ing-list">
           <div class="ing reveal">
             <h4>Ácido cítrico</h4>
             <span class="spec">Categoría: Acidulantes</span>
-            <p>Ajusta el pH en agua de bebida y formulaciones líquidas; uso extendido como acidificante natural.</p>
+            <p>Ajusta el pH de la solución; útil cuando la formulación requiere un rango específico para mejorar la solubilidad del nutriente.</p>
           </div>
           <div class="ing reveal">
             <h4>Acidulantes de línea</h4>
             <span class="spec">Categoría: Acidulantes</span>
-            <p>Portafolio de acidulantes para ajuste de pH en agua y alimento, según la formulación y especie objetivo.</p>
+            <p>Portafolio de acidulantes para ajuste fino de pH según la formulación y el nutriente que se busca hacer más disponible.</p>
           </div>
           <div class="ing reveal">
-            <h4>Por qué importa el pH</h4>
-            <span class="spec">Nota técnica</span>
-            <p>El control de pH en agua de bebida es una práctica habitual en avicultura y porcicultura para favorecer un ambiente digestivo menos propicio a patógenos.</p>
+            <h4>Ácido ascórbico</h4>
+            <span class="spec">Categoría: Antioxidantes</span>
+            <p>Actúa como antioxidante, ayudando a preservar la estabilidad de componentes sensibles a la oxidación dentro de la formulación.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Panel 4: Glicoles, aceites y derivados -->
+    <!-- Panel 4: Adyuvantes y adherencia -->
     <div class="panel" id="p4">
       <div class="panel-grid">
-        <div class="panel-media pm-4"><div class="caption">04 — DESEMPEÑO</div></div>
+        <div class="panel-media pm-4"><div class="caption">04 — ADHERENCIA</div></div>
         <div class="ing-list">
           <div class="ing reveal">
-            <h4>Glicoles</h4>
-            <span class="spec">Categoría: Glicoles</span>
-            <p>El propilenglicol es ampliamente utilizado como fuente de energía en dietas de transición de ganado lechero; consulte con su nutriólogo la aplicación específica.</p>
-          </div>
-          <div class="ing reveal">
-            <h4>Aceite esencial de naranja CP</h4>
-            <span class="spec">Prensado en frío</span>
-            <p>Saborizante natural cítrico, componente principal d-Limoneno, útil para mejorar la palatabilidad de premezclas y suplementos.</p>
+            <h4>Aceites naturales</h4>
+            <span class="spec">Categoría: Aceites naturales</span>
+            <p>Funcionan como vehículo o surfactante que favorece la adherencia y penetración foliar en aplicaciones líquidas.</p>
           </div>
           <div class="ing reveal">
             <h4>Derivados de ácidos grasos</h4>
             <span class="spec">Categoría: Derivados de ácidos grasos</span>
-            <p>Fuente energética concentrada y funcional para formulaciones que buscan mayor densidad calórica.</p>
+            <p>Actúan como emulsionantes o surfactantes, mejorando la mezcla entre fases y la cobertura sobre la superficie de la hoja.</p>
           </div>
           <div class="ing reveal">
-            <h4>Aceites naturales</h4>
-            <span class="spec">Categoría: Aceites naturales</span>
-            <p>Portafolio de aceites naturales para vehiculizar principios activos o aportar energía en premezclas.</p>
+            <h4>Glicoles</h4>
+            <span class="spec">Categoría: Glicoles</span>
+            <p>Se usan como solventes o vehículos en algunas formulaciones líquidas; consulte con su equipo de formulación la aplicación específica.</p>
           </div>
         </div>
       </div>
@@ -735,22 +714,22 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
 <section class="impact" id="impacto">
   <div class="impact-inner container">
     <div class="eyebrow reveal">Resultados</div>
-    <h2 class="reveal" style="--d:.05s; color:var(--flour); font-size:clamp(28px,4vw,44px); max-width:22ch;">Lo que gana su operación al trabajar con ADITMEX</h2>
+    <h2 class="reveal" style="--d:.05s; color:var(--flour); font-size:clamp(28px,4vw,44px); max-width:22ch;">Lo que gana su planta al trabajar con ADITMEX</h2>
     <div class="impact-grid">
       <div class="impact-card reveal" style="--d:.05s">
         <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-        <h4>Consistencia lote a lote</h4>
-        <p>Insumos con función documentada para que cada premezcla o formulación se comporte igual que la anterior.</p>
+        <h4>Menos sedimentación, más rendimiento</h4>
+        <p>Formulaciones líquidas que llegan igual de homogéneas al último litro, sin merma de nutriente en el fondo del tambo.</p>
       </div>
       <div class="impact-card reveal" style="--d:.1s">
         <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <h4>Menos pérdidas por descomposición</h4>
-        <p>Conservadores y antioxidantes dosificados con criterio técnico para granos, forraje y grasas almacenadas.</p>
+        <h4>Formulación a la medida del cliente</h4>
+        <p>Un catálogo amplio de excipientes y funcionales que permite ajustar la mezcla a cada cultivo o cliente sin cambiar de proveedor.</p>
       </div>
       <div class="impact-card reveal" style="--d:.15s">
         <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
         <h4>Asesoría técnica real</h4>
-        <p>Recomendaciones de función y aplicación antes de cotizar, no después de un problema en granja o planta.</p>
+        <p>Recomendaciones de función y aplicación antes de cotizar, no después de un problema de estabilidad en planta.</p>
       </div>
       <div class="impact-card reveal" style="--d:.05s">
         <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12l8.73-5.04M12 22.08V12"/></svg>
@@ -760,12 +739,12 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
       <div class="impact-card reveal" style="--d:.1s">
         <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/></svg>
         <h4>Respuesta en menos de 24 horas</h4>
-        <p>Disponibilidad y precio confirmados con rapidez, para que el ciclo productivo no se detenga por falta de insumo.</p>
+        <p>Disponibilidad y precio confirmados con rapidez, para que la producción no se detenga por falta de insumo.</p>
       </div>
       <div class="impact-card reveal" style="--d:.15s">
         <svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7h-9M14 17H5M17 4l3 3-3 3M7 14l-3 3 3 3"/></svg>
-        <h4>Un solo proveedor, todo el proceso</h4>
-        <p>Conservación, textura, control de pH y desempeño energético — un portafolio técnico en un solo lugar.</p>
+        <h4>Un solo proveedor, todas las funciones</h4>
+        <p>Estabilidad, aglutinación, disponibilidad de nutriente y adherencia — un portafolio técnico en un solo lugar.</p>
       </div>
     </div>
   </div>
@@ -777,7 +756,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
 <section class="trust">
   <div class="container">
     <div class="eyebrow reveal">Compromiso técnico</div>
-    <blockquote class="reveal" style="--d:.08s">"La diferencia entre un insumo y una solución es la dosificación correcta, la disponibilidad puntual y alguien del otro lado que entienda su proceso — sea una planta o una granja."</blockquote>
+    <blockquote class="reveal" style="--d:.08s">"No competimos con nuestros clientes fabricando fertilizante. Les damos la materia prima y el criterio técnico para que su fórmula rinda más y se adapte a cada cliente."</blockquote>
     <cite class="reveal" style="--d:.14s">— Equipo técnico ADITMEX</cite>
   </div>
 </section>
@@ -788,11 +767,11 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
 <section class="cta-final" id="contacto">
   <div class="container cta-inner">
     <div class="eyebrow reveal" style="color:var(--wheat-lt)">Siguiente paso</div>
-    <h2 class="reveal" style="--d:.05s">Hablemos de lo que su operación <i>necesita resolver.</i></h2>
-    <p class="lead reveal" style="--d:.1s">Cuéntenos qué está formulando y qué necesita resolver — conservación, textura, pH o desempeño energético. Respondemos con disponibilidad y precio en menos de 24 horas.</p>
+    <h2 class="reveal" style="--d:.05s">Hablemos del problema técnico <i>que quiere resolver.</i></h2>
+    <p class="lead reveal" style="--d:.1s">Cuéntenos qué está formulando y qué necesita resolver — estabilidad, aglutinación, disponibilidad de nutriente o adherencia. Respondemos con disponibilidad y precio en menos de 24 horas.</p>
     <div class="cta-row reveal" style="--d:.15s">
       <a href="mailto:ventas@aditmex.com.mx" class="btn btn-primary">Escribir a ventas@aditmex.com.mx</a>
-      <a href="https://wa.me/524435145662?text=Hola%2C%20me%20interesa%20cotizar%20materias%20primas%20para%20el%20sector%20agropecuario" class="btn btn-ghost" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a href="https://wa.me/524435145662?text=Hola%2C%20me%20interesa%20cotizar%20materias%20primas%20para%20fertilizantes" class="btn btn-ghost" target="_blank" rel="noopener">Escribir por WhatsApp</a>
     </div>
     <div class="cta-contacts reveal" style="--d:.2s">
       <div><span class="lbl">Oficina</span>Santos Degollado 595, Nueva Chapultepec, 58280 Morelia, Mich.</div>
@@ -805,7 +784,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--wheat); outline-of
 <footer>
   <div class="container footer-inner">
     <span class="logo">ADITMEX</span>
-    <p>© 2026 ADITMEX S. de R.L. — Distribuidora de materias primas para la industria de alimentos, aromas, cosmética, industrial y agropecuaria en México.</p>
+    <p>© 2026 ADITMEX S. de R.L. — Distribuidora de materias primas para la industria de alimentos, aromas, cosmética, industrial y para fabricantes de fertilizantes en México.</p>
   </div>
 </footer>
 
