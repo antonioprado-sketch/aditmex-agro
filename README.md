@@ -9,44 +9,49 @@ aditmex-landing-agro/
 └── assets/images/
     ├── hero/            → hero_main.jpg
     ├── segments/         → segment_fertilizantes_liquidos.jpg,
-    │                       segment_fertilizantes_granulados.jpg,
+    │                       segment_nutricion_vegetal.jpg,
+    │                       segment_aceites_esenciales.jpg,
     │                       segment_biofertilizantes.jpg
-    ├── products/         → product_1.jpg … product_4.jpg
+    ├── products/         → product_1.jpg … product_5.jpg
     └── backgrounds/      → bg_section_1.jpg, bg_section_2.jpg
 ```
 Cada subcarpeta trae un archivo `COLOCAR_AQUI...txt` que indica el nombre exacto que debe
 tener la imagen final. Bórralo cuando coloques la foto real.
 
 ## Cambios respecto a la versión anterior
-- **Se eliminó por completo la acuicultura** — segmento, tarjeta, imagen de referencia y
-  cualquier mención en el copy.
-- **Se eliminó el enfoque en ganadería/avicultura y nutrición animal** de la versión anterior,
-  para no diluir el nuevo enfoque.
-- **Nuevo posicionamiento:** ADITMEX **no vende fertilizantes** — provee las materias primas
-  funcionales que fabricantes y mezcladores de fertilizantes usan para (1) mejorar la
-  **eficiencia** de su fórmula y (2) **personalizarla** para cada cliente o cultivo. Esto me
-  lo confirmaste directamente, así que ya no es una suposición.
+- Se eliminó por completo la acuicultura, ganadería/avicultura y cualquier framing de
+  nutrición animal.
+- **Se incorporó contenido verificado** a partir de dos documentos que compartiste:
+  `DOC-20260724-WA0077.md` (posicionamiento de ADITMEX en nutrición vegetal e insumos
+  agrícolas) y `productos_quimicos_para_industria_agro.md` (productos químicos específicos
+  con **proveeduría ya identificada** y clientela confirmada).
+- Se agregaron 2 pestañas nuevas al portafolio técnico — **Nutrición vegetal y fertirriego**
+  (urea, sulfato de amonio, ácido fosfórico, sulfato de zinc, sulfato de magnesio, EDTA) y
+  **Aceites esenciales y bioinsumos** (naranja, ajo, mostaza, y referencia a neem, citronela,
+  canela, clavo, orégano y tomillo) — y una quinta, **Coadyuvantes y tratamiento** (ácido
+  cítrico, glicerina, propilenglicol, sosa cáustica, hipoclorito de sodio).
+- Los segmentos (`#segmentos`) se reorganizaron para reflejar estos mismos tres ejes.
+- Estabilidad/suspensión (goma xantana, guar, CMC) y recubrimiento/aglutinación (almidón de
+  maíz) se mantuvieron tal cual, ya que confirmaste que también aplican.
 
 ## De dónde sale el contenido técnico
-Sigo sin tener fichas técnicas de ADITMEX específicas para fertilizantes. Para no inventar
-nada, la página traduce sus **categorías reales de producto** (espesantes, acidulantes,
-derivados del maíz, aceites naturales, derivados de ácidos grasos, glicoles, conservadores)
-hacia funciones de eficiencia y personalización de fertilizantes que son de uso real y
-conocido en la industria:
+A diferencia de la primera versión — donde tuve que traducir categorías genéricas de ADITMEX
+hacia posibles usos agropecuarios sin certeza — este contenido nuevo proviene de **productos
+reales con proveeduría confirmada** según los documentos que compartiste. Es un nivel de
+certeza distinto y más alto que el resto de la página.
 
-| Categoría real de ADITMEX | Función en fertilizantes |
-|---|---|
-| Espesantes (goma xantana, guar, CMC) | Estabilidad/suspensión en fertilizantes líquidos |
-| Derivados del maíz (almidón) | Aglutinante/recubrimiento en fertilizantes granulados |
-| Acidulantes (ácido cítrico) | Ajuste de pH para disponibilidad de nutrientes |
-| Aceites naturales / derivados de ácidos grasos | Adyuvantes que mejoran adherencia foliar |
-| Glicoles | Solventes/vehículos en formulaciones líquidas |
-| Conservadores | Estabilidad de biofertilizantes/orgánicos frente a deterioro microbiano |
+Sigo evitando **dosis numéricas específicas** (g/L, %, kg/ha), porque esas cifras dependen del
+cultivo, la etapa fenológica y la formulación base de cada cliente — algo que corresponde
+definir a un agrónomo o al equipo técnico de quien fabrica el producto final, no algo que yo
+deba inventar. Donde el documento fuente da un dato objetivo verificable (como el 46% de
+nitrógeno de la urea), sí lo incluí, porque es una especificación del insumo en sí, no una
+recomendación de dosificación.
 
-Evito deliberadamente **dosis numéricas específicas**, porque dependen de la formulación base
-de cada fabricante — algo que corresponde a su equipo técnico definir, no algo que yo deba
-inventar. Donde el uso requiere criterio de un especialista (p. ej. glicoles como vehículo),
-lo señalo explícitamente en el texto ("consulte con su equipo de formulación").
+No incluí productos de "Protección del cultivo" (insecticidas, fungicidas, herbicidas de
+síntesis) mencionados en `DOC-20260724-WA0077.md` como categoría de mercado, porque ese
+documento los describe como oportunidad de posicionamiento, no como inventario confirmado de
+ADITMEX — a diferencia de los productos químicos del segundo documento, que sí vienen con
+clientela y aplicaciones específicas ya validadas.
 
 **Recomendación:** antes de publicar, pide a tu equipo técnico que revise cada afirmación de
 la sección de productos y la ajuste o respalde con fichas técnicas propias si ya las tienes.

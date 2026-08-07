@@ -1,4 +1,4 @@
-# Imágenes requeridas — ADITMEX Landing Page (Fertilizantes: eficiencia y a medida)
+# Imágenes requeridas — ADITMEX Landing Page (Nutrición vegetal, fertirriego y bioinsumos)
 
 El HTML ya está preparado para cargar estas imágenes automáticamente en cuanto las coloques
 en las rutas indicadas. Si un archivo no existe, la sección muestra un degradado de respaldo
@@ -27,56 +27,71 @@ identificables en primer plano.
 > premium chemical-plant photography, shallow depth of field, no visible people, no text or
 > logos.
 
-## 3. Segmento — Fertilizantes granulados
-**Ruta:** `assets/images/segments/segment_fertilizantes_granulados.jpg`
+## 3. Segmento — Nutrición vegetal y fertirriego
+**Ruta:** `assets/images/segments/segment_nutricion_vegetal.jpg`
 **Prompt:**
-> Ultra realistic close-up photograph of uniform granular fertilizer pellets streaming onto a
-> conveyor belt, warm golden and amber tones, dust particles softly backlit, photorealistic,
-> premium industrial photography, shallow depth of field, no text or logos.
+> Ultra realistic photograph of a modern drip irrigation (fertirrigation) system running
+> through rows of healthy green crops, water droplets catching warm daylight, sense of
+> precision agriculture, photorealistic, premium agricultural photography, shallow depth of
+> field, no people, no text or logos.
 
-## 4. Segmento — Biofertilizantes y adyuvantes
+## 4. Segmento — Aceites esenciales y bioinsumos
+**Ruta:** `assets/images/segments/segment_aceites_esenciales.jpg`
+**Prompt:**
+> Ultra realistic close-up photograph of amber glass essential oil bottles (citrus, garlic,
+> mustard) catching warm directional light, citrus peel and garlic cloves scattered nearby,
+> soft bokeh background, photorealistic, premium technical photography, no text or logos.
+
+## 5. Segmento — Coadyuvantes y tratamiento
 **Ruta:** `assets/images/segments/segment_biofertilizantes.jpg`
 **Prompt:**
-> Ultra realistic photograph of amber glass bottles with natural oils and organic liquid
-> concentrate catching warm directional light on a stainless steel lab counter, soft bokeh
-> background, photorealistic, premium technical photography, no text or logos.
+> Ultra realistic photograph of clean water flowing through a stainless steel treatment
+> system, droplets catching cool blue light, sense of industrial precision, photorealistic,
+> premium technical photography, no text or logos.
 
-## 5. Producto 1 — Estabilidad y suspensión
+## 6. Producto 1 — Estabilidad y suspensión
 **Ruta:** `assets/images/products/product_1.jpg`
 **Prompt:**
 > Ultra realistic macro photograph of fine white thickening powder being poured into a clear
 > liquid inside a stainless steel mixing vessel, visible viscosity and swirl, cool blue accent
 > lighting, photorealistic, industrial food-science aesthetic, no text or logos.
 
-## 6. Producto 2 — Recubrimiento y aglutinación
+## 7. Producto 2 — Recubrimiento y aglutinación
 **Ruta:** `assets/images/products/product_2.jpg`
 **Prompt:**
 > Ultra realistic overhead photograph of golden granular fertilizer pellets with visible fine
 > powder coating, warm directional light, dark surface background, photorealistic still-life
 > texture, shallow depth of field, no text or logos.
 
-## 7. Producto 3 — Disponibilidad de nutrientes
+## 8. Producto 3 — Nutrición vegetal y fertirriego
 **Ruta:** `assets/images/products/product_3.jpg`
 **Prompt:**
-> Ultra realistic close-up photograph of a laboratory pH meter probe in clear liquid solution,
-> warm amber accent lighting, droplets catching light, photorealistic, premium technical
-> photography, no text or logos.
+> Ultra realistic close-up photograph of white crystalline mineral salts (fertilizer raw
+> material) in a stainless steel scoop, warm amber accent lighting, photorealistic, premium
+> industrial chemistry photography, no text or logos.
 
-## 8. Producto 4 — Adyuvantes y adherencia
+## 9. Producto 4 — Aceites esenciales y bioinsumos
 **Ruta:** `assets/images/products/product_4.jpg`
+**Prompt:**
+> Ultra realistic close-up photograph of fresh orange peel and garlic being cold-pressed, a
+> few drops of essential oil catching light, vivid warm tones against a dark background,
+> photorealistic, high detail, premium natural-ingredient photography, no text or logos.
+
+## 10. Producto 5 — Coadyuvantes y tratamiento
+**Ruta:** `assets/images/products/product_5.jpg`
 **Prompt:**
 > Ultra realistic close-up photograph of a fine mist of liquid being sprayed onto a green leaf
 > surface, droplets clinging and glistening in warm light, photorealistic, premium agricultural
 > technical photography, no text or logos.
 
-## 9. Fondo — Sección Resultados/Impacto
+## 11. Fondo — Sección Resultados/Impacto
 **Ruta:** `assets/images/backgrounds/bg_section_1.jpg`
 **Prompt:**
 > Ultra realistic dark textural photograph of scattered granular fertilizer and fine dust on a
 > near-black surface, dramatic single warm side light, moody and premium, abstract texture
 > suitable as a subtle background, photorealistic, no text or logos.
 
-## 10. Fondo — Cierre / CTA final
+## 12. Fondo — Cierre / CTA final
 **Ruta:** `assets/images/backgrounds/bg_section_2.jpg`
 **Prompt:**
 > Ultra realistic dark photograph of a fertilizer manufacturing facility at dusk, warm amber
